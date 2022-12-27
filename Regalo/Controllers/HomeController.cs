@@ -21,6 +21,10 @@ namespace Regalo.Controllers
         {
             return View();
         }
+        public IActionResult PageTest()
+        {
+            return View();
+        }
         public IActionResult ConfirmarFoto()
         {
             return View();
