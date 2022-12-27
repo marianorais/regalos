@@ -21,6 +21,18 @@ namespace Regalo.Controllers
         {
             return View();
         }
+        public IActionResult AllPages()
+        {
+            return View();
+        }
+        public IActionResult Page24()
+        {
+            return View();
+        }
+        public IActionResult Page17()
+        {
+            return View();
+        }
         public IActionResult PageTest()
         {
             return View();

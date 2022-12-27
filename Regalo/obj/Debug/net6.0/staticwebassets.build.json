@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "9sYsp2jZQXqcUs2JsvHcMOlhJNiEOzS5FeL3q2f3zmU=",
+  "Hash": "ZCLSLXsPEuHmLpHyuXsm1klx3+QdU9TC68z2M3jYqSM=",
   "Source": "Regalo",
   "BasePath": "_content/Regalo",
   "Mode": "Default",
@@ -525,6 +525,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\fashion.png"
+    },
+    {
+      "Identity": "C:\\Users\\pc\\Desktop\\App Fecha Libre\\App-Fecha-Libre\\Regalo\\Regalo\\wwwroot\\img\\fashionvideo.png",
+      "SourceId": "Regalo",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\pc\\Desktop\\App Fecha Libre\\App-Fecha-Libre\\Regalo\\Regalo\\wwwroot\\",
+      "BasePath": "_content/Regalo",
+      "RelativePath": "img/fashionvideo.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\fashionvideo.png"
     },
     {
       "Identity": "C:\\Users\\pc\\Desktop\\App Fecha Libre\\App-Fecha-Libre\\Regalo\\Regalo\\wwwroot\\img\\icon-foto.png",
