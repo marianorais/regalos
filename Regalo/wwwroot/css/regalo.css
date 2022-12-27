@@ -354,8 +354,8 @@ input.mensaje-opcional::-webkit-input-placeholder {
 }
 .foto-regalo2 {
     position: relative;
-    top: -400px;
-    left: 1100px;
+    top: -100px;
+    left: 800px;
 }
 .img-content {
     font-size: 13px !important;
