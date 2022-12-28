@@ -1,31 +1,40 @@
 ﻿
+<style>
+    input[type="file"] {
+        display: none;
+    }
+</style>
+
 <div>
     @*PAGE 3*@
     <div id="page3">
     <div style="margin-top:60px;flex-direction: column;display: flex;">
         <img src="/img/RegalosCustom.png" style="width: 200px;height: 235px;" class="center-img" alt="" />
-            <div style="margin-top:40px;align-self: center;text-align-last: center;">
+            <div style="margin-top:40px;align-self: center;">
             <p class="one-line">Elegí como</p>
             <p class="one-line">querés acompañar </p>
             <p class="one-line">a tu regalo!</p>
         </div>
         <div style="top: 570px;" class="column center-button">
             <div style="width: 174px;height: 54px;margin-top: 240px;display: block;" class="btn btn-camera">
-                <div style="margin-top: -10px;font-size: 16px;" onclick="ocultarVista3()">
+                <label style="margin-top: -10px;font-size: 16px;" >
+                    <input id="foto" name="foto" type="file" class="file_multi_foto" onchange="previewFile()" accept="image/*" capture />
+              
                     <img class="img-camera" style="width: 35px;height: 31px;margin-top: -4px;" src="/img/icon-foto.png" />
 
                     <div class="img-text img-button">
                         FOTO
                     </div>
-                </div>
+                </label>
             </div>
             <div style="width: 174px;height: 54px;margin-top: 45px;" class="btn btn-camera">
-                <div style="margin-top: -10px;font-size: 16px;" onclick="ocultarVista3()">
+                <label style="margin-top: -10px;font-size: 16px;" >
+                    <input type="file" name="file[]" class="file_multi_video" accept="video/*">
                     <img class="img-video img " src="/img/icon-video.png" style="width: 41px;height: 28px;margin-left: 10% !important;" />
                     <div class="img-text img-button">
                         VIDEO
                     </div>
-                </div>
+                </label>
             </div>
         </div>
         <img class="logo" src="/img/dearx.png" style="width: 122px;height: 54px;align-self: flex-end;margin-top: 90%;margin-right: 40px;" />
@@ -33,10 +42,14 @@
     </div>
     
     @*PAGE 17*@
-    <div id="page17" style="display:none !important; margin-top:60px;align-self: center;">
-        <img src="/img/fashionvideo.png" style="width: 356px;height: 574px;" class="center-img" alt="" />
+    <div id="page17" style="display:none !important; margin-top:60px;align-self: center; text-align-last: center;">
+        <video id="video" style="display:none;height: 50%;width: 50%;border-radius: 20px;" controls playsInline>
+           
+            <source src="" type="video/mp4" id="video_here">
+        </video>
+        <img src="" id="foto_here"  style="width: 356px;height: 574px;display:none;border-radius: 20px;" class="center-img" alt="" />
         <div style="text-align: -webkit-center;" class="confirm">
-            <button class="btn textButton btn-white">Cancelar</button>
+            <button onclick="volverVista3()" class="btn textButton btn-white">Cancelar</button>
             <button onclick="ocultarVista17()" style="margin-left: 40px;" class="btn textButton color-white">Siguiente</button>
         </div>
 
@@ -54,7 +67,7 @@
                     <input placeholder="Mensaje (Opcional)" class="mensaje-opcional input-personalizar" />
                 </div>
                 <div class="confirm">
-                    <button class="textButton btn btn-white">CANCELAR</button>
+                    <button onclick="volverVista17()" class="textButton btn btn-white">CANCELAR</button>
                     <button onclick="ocultarVista20()" style="margin-left:20px;" class="textButton btn color-white">CONFIRMAR</button>
                 </div>
             </div>
@@ -65,7 +78,7 @@
     @*PAGE 24*@
     <div id="page24" style="display:none !important; margin-top:60px;flex-direction: column;display: flex;">
         <img src="/img/regalo3.png" style="width: 259px;height: 313px;" class="center-img" alt="" />
-        <div style="margin-top:40px;align-self: center;">
+        <div style="margin-top:40px;align-self: center;text-align-last: center;">
             <p class="one-line">Listo!</p>
             <p class="one-line">Tu mensaje</p>
             <p class="one-line">ya esta confirmado.</p>
@@ -76,7 +89,59 @@
     @*PAGE 5*@
     <div id="page5" style="display:none !important;"></div>
 </div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script>
+    $(document).on("change", ".file_multi_video", function (evt) {
+        //alert('cambio');
+        var $source = $('#video_here');
+        $source[0].src = URL.createObjectURL(this.files[0]);
+        $source.parent()[0].load();
+        document.getElementById("video_here").style.display = '';
+        ocultarVista3();
+        //$("#video").attr("hidden", false);
+    });
+
+    //$(document).on("change", ".file_multi_foto", function (evt) {
+    //    //alert('cambio');
+    //    var $source = $('#foto_here');
+    //    console.log(this.files[0]);
+    //    $source[0].src = URL.createObjectURL(this.files[0]);
+    //    $source.parent()[0].load();
+    //    ocultarVista3();
+    //    //$("#video").attr("hidden", false);
+    //});
+
+    function previewFile() {
+        // Where you will display your image
+        var preview = document.getElementById('foto_here');
+        // The button where the user chooses the local image to display
+        var file = document.getElementById('foto').files[0];
+        // FileReader instance
+        var reader = new FileReader();
+
+        // When the image is loaded we will set it as source of
+        // our img tag
+        reader.onloadend = function () {
+            preview.src = reader.result;
+        }
+
+
+        if (file) {
+            // Load image as a base64 encoded URI
+            reader.readAsDataURL(file);
+        } else {
+            preview.src = "";
+        }
+        document.getElementById("foto_here").style.display = '';
+        ocultarVista3();
+    }
+
+    function volverVista3() {
+        document.getElementById("page17").style.display = "none";
+        document.getElementById("page3").style.display = '';
+    }
     function ocultarVista3(){
         document.getElementById("page3").style.display = "none";
         document.getElementById("page17").style.display = '';
@@ -84,6 +149,10 @@
     function ocultarVista17() {
         document.getElementById("page17").style.display = "none";
         document.getElementById("page20").style.display = '';
+    }
+    function volverVista17() {
+        document.getElementById("page20").style.display = "none";
+        document.getElementById("page17").style.display = '';
     }
     function ocultarVista20() {
         document.getElementById("page20").style.display = "none";

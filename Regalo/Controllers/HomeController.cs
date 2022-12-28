@@ -25,6 +25,10 @@ namespace Regalo.Controllers
         {
             return View();
         }
+        public IActionResult AllPagesDesktop()
+        {
+            return View();
+        }
         public IActionResult Page24()
         {
             return View();
