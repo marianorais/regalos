@@ -21,6 +21,10 @@ namespace Regalo.Controllers
         {
             return View();
         }
+        public IActionResult PageAsignacion()
+        {
+            return View();
+        }
         public IActionResult AllPages()
         {
             return View();

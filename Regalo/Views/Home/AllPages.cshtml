@@ -3,12 +3,59 @@
     input[type="file"] {
         display: none;
     }
+
+    .body{
+        overflow-x: hidden;
+    }
+
+    .der {
+        float: right;
+        text-align: center;
+    }
+
+    .asignar {
+        width: 79px;
+        height: 38px;
+        font: inherit;
+    }
+
+    .colorLetra {
+        color: white;
+    }
+
+    #mdialTamanioQR {
+        width: 100% !important;
+    }
+
+    .progress {
+        height: 35px;
+        width: 100%;
+        border: 1px solid #428bca;
+        border-radius: 5px;
+        background-color: #e6f3fa;
+        margin-bottom: 15px;
+    }
+
+    .progress-bar {
+        height: 100%;
+        background: #428bca;
+        display: flex;
+        align-items: center;
+        transition: width 0.25s;
+        border-radius: 5px;
+    }
+
+    .progress-bar-text {
+        margin-left: 10px;
+        font-weight: bold;
+        color: #cce7f5;
+    }
 </style>
 
 <div>
     @*PAGE 3*@
     <div id="page3">
-    <div style="margin-top:60px;flex-direction: column;display: flex;">
+        <div style="margin-top:60px;flex-direction: column;display: flex;">
         <img src="/img/RegalosCustom.png" style="width: 200px;height: 235px;" class="center-img" alt="" />
             <div style="margin-top:40px;align-self: center;">
             <p class="one-line">Elegí como</p>
@@ -17,7 +64,7 @@
         </div>
         <div style="top: 570px;" class="column center-button">
             <div style="width: 174px;height: 54px;margin-top: 240px;display: block;" class="btn btn-camera">
-                <label style="margin-top: -10px;font-size: 16px;" >
+                <label style=" margin-top: -10px;font-size: 16px;top: 20px;vertical-align: top;" >
                     <input id="foto" name="foto" type="file" class="file_multi_foto" onchange="previewFile()" accept="image/*" capture />
               
                     <img class="img-camera" style="width: 35px;height: 31px;margin-top: -4px;" src="/img/icon-foto.png" />
@@ -28,7 +75,7 @@
                 </label>
             </div>
             <div style="width: 174px;height: 54px;margin-top: 45px;" class="btn btn-camera">
-                <label style="margin-top: -10px;font-size: 16px;" >
+                    <label style="display: block;margin-top: -10px;font-size: 16px;top: 20px;vertical-align: top;">
                     <input type="file" name="file[]" class="file_multi_video" accept="video/*">
                     <img class="img-video img " src="/img/icon-video.png" style="width: 41px;height: 28px;margin-left: 10% !important;" />
                     <div class="img-text img-button">
@@ -37,7 +84,6 @@
                 </label>
             </div>
         </div>
-        <img class="logo" src="/img/dearx.png" style="width: 122px;height: 54px;align-self: flex-end;margin-top: 90%;margin-right: 40px;" />
     </div>
     </div>
     
@@ -49,11 +95,10 @@
         </video>
         <img src="" id="foto_here"  style="width: 356px;height: 574px;display:none;border-radius: 20px;" class="center-img" alt="" />
         <div style="text-align: -webkit-center;" class="confirm">
-            <button onclick="volverVista3()" class="btn textButton btn-white">Cancelar</button>
-            <button onclick="ocultarVista17()" style="margin-left: 40px;" class="btn textButton color-white">Siguiente</button>
+            <button onclick="volverVista3()" style="line-height: 50px;" class="btn textButton btn-white">Cancelar</button>
+            <button onclick="ocultarVista17()" style="margin-left: 40px;line-height: 53px;" class="btn textButton color-white">Siguiente</button>
         </div>
 
-        <img class="logo" src="/img/dearx.png" style="width: 122px;height: 54px;margin-right: 40px;margin-top: 60px;float: right;" />
     </div>
     
     @*PAGE 20*@
@@ -64,15 +109,16 @@
                 <div class="center">
                     <input placeholder="De:" class="input-personalizar" />
                     <input placeholder="Para:" class="input-personalizar" />
-                    <input placeholder="Mensaje (Opcional)" class="mensaje-opcional input-personalizar" />
+                    <textarea placeholder="Mensaje (Opcional)" style="font-size: 17px;" cols="10" rows="3" class="mensaje-opcional input-personalizar"></textarea>
                 </div>
                 <div class="confirm">
-                    <button onclick="volverVista17()" class="textButton btn btn-white">CANCELAR</button>
-                    <button onclick="ocultarVista20()" style="margin-left:20px;" class="textButton btn color-white">CONFIRMAR</button>
+                    <button onclick="volverVista17()" style="line-height: 50px;" class="textButton btn btn-white">CANCELAR</button>
+                    <button onclick="ocultarVista20()" style="margin-left:20px;text-align: center !important;line-height: 53px;" class="textButton btn color-white">
+                        CONFIRMAR
+                    </button>
                 </div>
             </div>
         </div>
-        <img class="logo" src="/img/dearx.png" style="width: 122px;height: 54px;margin-right: 60px; margin-top: 360px;float: right;" />
     </div>
     
     @*PAGE 24*@
@@ -83,11 +129,79 @@
             <p class="one-line">Tu mensaje</p>
             <p class="one-line">ya esta confirmado.</p>
         </div>
-        <img class="logo" src="/img/dearx.png" style="width: 122px;height: 54px;align-self: flex-end;margin-top: 330px;margin-right: 40px;" />
     </div>
     
     @*PAGE 5*@
-    <div id="page5" style="display:none !important;"></div>
+    <div id="page5" style="display:none !important;">
+        <div class="column-flex" style="display:flex;flex-direction:row;margin-top:300px;justify-content: space-between;">
+
+            <div style="flex-direction:column">
+                <img src="/img/RegalosCustom.png" style="width: 331px;height: 360px;left: -790px;top: -150px;" class="img-fluid" alt="" />
+                <div style="margin-left: -270px;">
+                    <p style="font-size:39px" class="one-line-title titulo-sorpresa regalo-titulo">Hola Fede,</p>
+                    <p style="font-size:39px" class="one-line-title titulo-sorpresa regalo-titulo">Martín tiene una sorpresa</p>
+                    <p style="font-size:39px" class="one-line-title titulo-sorpresa regalo-titulo">para vos!</p>
+                </div>
+            </div>
+
+            <div style="flex-direction:column">
+                <img src="/img/amigos.png" style="top: -160px;left: -400px;width: 623px;height: 440px;" class="img-fluid" alt="" />
+                <textarea style="display: flex;flex: none;margin-top: 15px;" class="rectangulo img-fluid">Fede, 
+felicitaciones por tus primeros 40 años.
+Hasta los 120 amigo!!
+            </textarea>
+                <div style="float: right;margin-top: 10px;" class="btn-center btn color-white">COMPARTIR</div>
+            </div>
+
+
+        </div>
+    </div>
+    
+    @*Page Asignacion*@
+    <div id="pageAsignacion" style="display:none !important;">
+        <center>
+            <h1>
+                Asignación De QR
+            </h1>
+            <div>
+                <input class="form-control" style="border-radius:33px; text-align:center; width:35%" id="buscarNro" type="text" placeholder="Buscar...">
+                <br>
+            </div>
+        </center>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Mail</th>
+                    <th scope="col">Nro Orden</th>
+                    <th scope="col">Asignar</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Mark</td>
+                    <td>Mark@gmail.com</td>
+                    <td>1</td>
+                    <td><button type="button" id="accion" onclick="asigno('');" class="btn btn-success colorLetra asignar">Asignar</button></td>
+                </tr>
+                <tr>
+                    <td>Jacob</td>
+                    <td>Jacob@gmail.com</td>
+                    <td>2</td>
+                    <td><button type="button" id="accion" onclick="asigno('');" class="btn btn-success colorLetra asignar">Asignar</button></td>
+                </tr>
+                <tr>
+                    <td>Larry</td>
+                    <td>Larry@gmail.com</td>
+                    <td>3</td>
+                    <td><button type="button" id="accion" onclick="asigno('');" class="btn btn-success colorLetra asignar">Asignar</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <img class="logo" src="/img/dearx.png" style="width: 122px;height: 54px;position: absolute;bottom: 0;right: 0;" />
 </div>
 
 
@@ -95,23 +209,30 @@
 <script>
     $(document).on("change", ".file_multi_video", function (evt) {
         //alert('cambio');
-        var $source = $('#video_here');
-        $source[0].src = URL.createObjectURL(this.files[0]);
-        $source.parent()[0].load();
-        document.getElementById("video_here").style.display = '';
-        ocultarVista3();
+        previewVideo();
+        //var $source = $('#video_here');
+        //$source[0].src = URL.createObjectURL(this.files[0]);
+        //$source.parent()[0].load();
+        //document.getElementById("video").style.display = '';
+        //document.getElementById("foto_here").style.display = "none";
+        //ocultarVista3();
         //$("#video").attr("hidden", false);
     });
 
-    //$(document).on("change", ".file_multi_foto", function (evt) {
-    //    //alert('cambio');
-    //    var $source = $('#foto_here');
-    //    console.log(this.files[0]);
-    //    $source[0].src = URL.createObjectURL(this.files[0]);
-    //    $source.parent()[0].load();
-    //    ocultarVista3();
-    //    //$("#video").attr("hidden", false);
-    //});
+    function previewVideo() {
+        // Where you will display your image
+        var preview = document.getElementById('video_here');
+        var file = document.getElementById('video').files[0];
+
+        preview.src = URL.createObjectURL(file);
+        preview.parent()[0].load();
+        // The button where the user chooses the local image to display
+        var file = document.getElementById('foto').files[0];
+
+        document.getElementById("video").style.display = '';
+        document.getElementById("foto_here").style.display = "none";
+        ocultarVista3();
+    }
 
     function previewFile() {
         // Where you will display your image
@@ -135,6 +256,7 @@
             preview.src = "";
         }
         document.getElementById("foto_here").style.display = '';
+        document.getElementById("video").style.display = "none";
         ocultarVista3();
     }
 
@@ -162,4 +284,43 @@
         document.getElementById("page20").style.display = "none";
         document.getElementById("page24").style.display = '';
     }
+</script>
+<script>
+
+    document.addEventListener("DOMContentLoaded", () => {
+        $("#buscarNro").on("keyup", function () {
+            var value = $(this).val().toLowerCase();
+            $("#TablaNro tr").filter(function () {
+                $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+            });
+        });
+    });
+
+
+    function asigno(v) {
+        $.ajax({
+            url: "@(Url.Action("GeneroAsignacion", "Video"))",
+            type: "POST",
+            data: { linkey: $("#linkey").val(), valor: v },
+            dataType: "json",
+            traditional: true,
+            success: function (data) {
+                if (data.result == "Ok") {
+                    Swal.fire({
+                        title: "Bien", text: "Se cambio sin problemas", icon: "success"
+                    });
+
+                }
+                else {
+                    Swal.fire({
+                        title: "Error", text: "Ocurrio un error al modificar el registro", icon: "error"
+                    });
+
+                }
+            }
+
+        });
+
+    }
+
 </script>
