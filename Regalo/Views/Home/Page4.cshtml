@@ -1,20 +1,33 @@
 ﻿
-<div class="max-width wrapper ">
-    <div style="margin-top:300px;" class="">
-        <div class="column texto-sorpresa">
-            <h1 style="top: 130px; font-size:39px" class="titulo-sorpresa ">Hola Fede,</h1>
-            <div class="textosorpresa">
-                <h1 style="top: 115px; font-size:39px" class="titulo-sorpresa regalo-titulo">Martín tiene una sorpresa</h1>
-                <h1 style="top: 95px; font-size:39px" class="titulo-sorpresa regalo-titulo last-title">para vos!</h1>
+<style>
+    body {
+        overflow-x: hidden;
+    }
+
+    /*.container {
+        max-width: none;
+    }*/
+</style>
+
+<div class="column-flex" style="display:flex;flex-direction:row;margin-top:10%;justify-content: center;">
+    <input type="hidden" id="video" value="@ViewBag.video">
+        <div class="regaloCustom" style="flex-direction:column;display: flex;align-items: flex-start;">
+            <img src="/img/RegalosCustom.png" style="width: 331px;height: 360px;margin-left: -40px;" class="img-share img-fluid" alt="" />
+            <div class="p-content" style="margin-top: 50px;max-width: 90%;">
+                <p style="font-size:39px" class="one-line-title ">Hola Fede,</p>
+                <p style="font-size:39px" class="two-lines one-line-title">Lucas tiene</p>
+                <p style="font-size:39px" class="one-line-title ">una sorpresa para vos!</p>
             </div>
         </div>
-            <img src="/img/RegalosCustom.png" style="width: 331px; height: 360px;  left: 10px" class="foto-amigos" alt="" />
-            <img src="/img/amigos.png" style=" top: -360px; left: 427px; width: 623px; height: 440px;" class="foto-regalo" alt="" />
-            <textarea class="rectangulo">Fede, 
+
+        <div style="flex-direction:column" class="share-data">
+            <div class="container-img" style="">
+                <img id="fotoTomada" src="/img/amigos.png" style="object-fit: contain;width: 100%;height: 100%;" class="img-fluid amigos-foto" alt="">
+            </div>
+        <textarea style="display: flex;flex: none;margin-top: 15px;border:none;color: #404040c9;" class="font-openSans rectangulo img-fluid">Fede,
 felicitaciones por tus primeros 40 años.
 Hasta los 120 amigo!!
-            </textarea>
-        <div class="btn-center btn color-white">COMPARTIR</div>
-    </div>
+                </textarea>
+            <div style="padding-bottom: 0px;float: right;margin-top: 20px;align-self: self-end;" class="btn-center btn color-white">COMPARTIR</div>
+        </div>
 </div>
-

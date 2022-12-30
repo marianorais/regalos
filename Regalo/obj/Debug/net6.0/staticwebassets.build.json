@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "ZCLSLXsPEuHmLpHyuXsm1klx3+QdU9TC68z2M3jYqSM=",
+  "Hash": "sxP3u4x8aDNl3Lu58bD7Soac/rNf4TRPiUPLSQhXTXQ=",
   "Source": "Regalo",
   "BasePath": "_content/Regalo",
   "Mode": "Default",
@@ -544,6 +544,23 @@
       "OriginalItemSpec": "wwwroot\\img\\fashionvideo.png"
     },
     {
+      "Identity": "C:\\Users\\pc\\Desktop\\App Fecha Libre\\App-Fecha-Libre\\Regalo\\Regalo\\wwwroot\\img\\galery.png",
+      "SourceId": "Regalo",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\pc\\Desktop\\App Fecha Libre\\App-Fecha-Libre\\Regalo\\Regalo\\wwwroot\\",
+      "BasePath": "_content/Regalo",
+      "RelativePath": "img/galery.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\galery.png"
+    },
+    {
       "Identity": "C:\\Users\\pc\\Desktop\\App Fecha Libre\\App-Fecha-Libre\\Regalo\\Regalo\\wwwroot\\img\\icon-foto.png",
       "SourceId": "Regalo",
       "SourceType": "Discovered",
@@ -559,23 +576,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\icon-foto.png"
-    },
-    {
-      "Identity": "C:\\Users\\pc\\Desktop\\App Fecha Libre\\App-Fecha-Libre\\Regalo\\Regalo\\wwwroot\\img\\icon-galeria.png",
-      "SourceId": "Regalo",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\pc\\Desktop\\App Fecha Libre\\App-Fecha-Libre\\Regalo\\Regalo\\wwwroot\\",
-      "BasePath": "_content/Regalo",
-      "RelativePath": "img/icon-galeria.png",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\img\\icon-galeria.png"
     },
     {
       "Identity": "C:\\Users\\pc\\Desktop\\App Fecha Libre\\App-Fecha-Libre\\Regalo\\Regalo\\wwwroot\\img\\icon-video.png",

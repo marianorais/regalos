@@ -4,8 +4,8 @@
         display: none;
     }
 
-    .body{
-        overflow-x: hidden;
+    body {
+        overflow-x: hidden !important;
     }
 
     .der {
@@ -55,61 +55,97 @@
 <div>
     @*PAGE 3*@
     <div id="page3">
-        <div style="margin-top:60px;flex-direction: column;display: flex;">
-        <img src="/img/RegalosCustom.png" style="width: 200px;height: 235px;" class="center-img" alt="" />
+        <div style="flex-direction: column;display: flex;align-items: center;">
+            <img src="/img/RegalosCustom.png" style="width: auto;height: 200px" alt="" />
             <div style="margin-top:40px;align-self: center;">
-            <p class="one-line">Elegí como</p>
-            <p class="one-line">querés acompañar </p>
-            <p class="one-line">a tu regalo!</p>
-        </div>
-        <div style="top: 570px;" class="column center-button">
-            <div style="width: 174px;height: 54px;margin-top: 240px;display: block;" class="btn btn-camera">
-                <label style=" margin-top: -10px;font-size: 16px;top: 20px;vertical-align: top;" >
-                    <input id="foto" name="foto" type="file" class="file_multi_foto" onchange="previewFile()" accept="image/*" capture />
-              
-                    <img class="img-camera" style="width: 35px;height: 31px;margin-top: -4px;" src="/img/icon-foto.png" />
+                <p class="one-line">Elegí como</p>
+                <p class="one-line">querés acompañar </p>
+                <p class="one-line">a tu regalo!</p>
+            </div>
+            <div class="column">
+                <div style="width: 174px;height: 54px;margin-top: 40px;display: block;" class="btn btn-camera">
+                    <label style=" margin-top: -10px;font-size: 16px;top: 20px;vertical-align: top;" onclick="sacarFoto()">
+                        @*<input id="foto" name="foto" type="file" class="file_multi_foto" onchange="previewFile()" accept="image/*" capture />*@
 
-                    <div class="img-text img-button">
-                        FOTO
-                    </div>
-                </label>
-            </div>
-            <div style="width: 174px;height: 54px;margin-top: 45px;" class="btn btn-camera">
+                        <img class="img-camera" style="width: 35px;height: 31px;margin-top: -4px;" src="/img/icon-foto.png" />
+
+                        <div class="img-text img-button">
+                            FOTO
+                        </div>
+                    </label>
+                </div>
+                <div style="width: 174px;height: 54px;margin-top: 45px;" class="btn btn-camera">
                     <label style="display: block;margin-top: -10px;font-size: 16px;top: 20px;vertical-align: top;">
-                    <input type="file" name="file[]" class="file_multi_video" accept="video/*">
-                    <img class="img-video img " src="/img/icon-video.png" style="width: 41px;height: 28px;margin-left: 10% !important;" />
-                    <div class="img-text img-button">
-                        VIDEO
-                    </div>
-                </label>
+                        <input type="file" name="videoGrabado" id="videoGrabado" class="file_multi_video" accept="video/*" capture>
+                        <img class="img-video img " src="/img/icon-video.png" style="width: 41px;height: 28px;margin-left: 10% !important;" />
+                        <div class="img-text img-button">
+                            VIDEO
+                        </div>
+                    </label>
+                </div>
             </div>
         </div>
     </div>
+
+    @*PAGE 7*@
+    <div id="page7" style="display:none">
+        <div style="flex-direction: column;display: flex;align-items: center;">
+            <img src="/img/RegalosCustom.png" style="width: auto;height: 200px;" alt="" />
+            <div style="margin-top:40px;align-self: center;">
+                <p style="line-height: 20px !important;font: normal normal bold 30px/37px Montserrat;" class="one-line">Podés sacar</p>
+                <p style="line-height: 20px !important;font: normal normal bold 30px/37px Montserrat;" class="one-line">una foto o elegir</p>
+                <p style="line-height: 20px !important;font: normal normal bold 30px/37px Montserrat;" class="one-line">la que más te guste</p>
+            </div>
+            <div class="column">
+                <div style="width: 229px;height: 60px;margin-top: 40px;display: flex;flex-direction: row;place-content: center;" class="btn btn-camera">
+                    <label style="display: flex;flex-direction: row;align-items: center;">
+                        <input id="foto" name="foto" type="file" class="file_multi_foto" onchange="previewFile()" accept="image/*" capture />
+                        <img class="img-camera" style="width: auto;height: 28px;" src="/img/galery.png" />
+
+                        <div class="img-text img-button">
+                            ELEGIR FOTO
+                        </div>
+                    </label>
+                </div>
+                <div style="width: 229px;height: 60px;margin-top: 40px;display: flex;flex-direction: row;place-content: center;" class="btn btn-camera">
+                    <label style="display: flex;flex-direction: row;align-items: center;">
+                        <input id="foto" name="foto" type="file" class="file_multi_foto" onchange="previewFile()" accept="image/*" capture />
+                        <img class="img-camera" style="width: auto;height: 28px;" src="/img/icon-foto.png" />
+
+                        <div class="img-text img-button">
+                            SACAR FOTO
+                        </div>
+                    </label>
+                </div>
+            </div>
+        </div>
     </div>
-    
+
     @*PAGE 17*@
-    <div id="page17" style="display:none !important; margin-top:60px;align-self: center; text-align-last: center;">
-        <video id="video" style="display:none;height: 50%;width: 50%;border-radius: 20px;" controls playsInline>
-           
+    <div id="page17" style="display:none !important;align-self: center; text-align-last: center;">
+        <video id="video" style="display:none;height: auto;width: auto;max-width: 90%;border-radius: 20px;" controls playsInline>
+
             <source src="" type="video/mp4" id="video_here">
         </video>
-        <img src="" id="foto_here"  style="width: 356px;height: 574px;display:none;border-radius: 20px;" class="center-img" alt="" />
-        <div style="text-align: -webkit-center;" class="confirm">
+        <img src="" id="foto_here" style="width: auto; max-width: 90%;height: auto;display:none;border-radius: 20px;" class="center-img" alt="" />
+        <div style="text-align: -webkit-center;display: flex;justify-content: center;" class="confirm">
             <button onclick="volverVista3()" style="line-height: 50px;" class="btn textButton btn-white">Cancelar</button>
             <button onclick="ocultarVista17()" style="margin-left: 40px;line-height: 53px;" class="btn textButton color-white">Siguiente</button>
         </div>
 
     </div>
-    
+
     @*PAGE 20*@
     <div id="page20" style="display:none !important;">
-        <div style="top: 140px;" class="row">
+        <div style="top: 540px;" class="">
             <div class="center">
-                <h1 class="center personalizar-titulo">Personalizá tu mensaje</h1>
+                <h1 class="center personalizar-titulo" style="max-width: 200px;font: normal normal bold 30px/37px Montserrat;margin-top: 50px;">
+                    Personalizá tu mensaje
+                </h1>
                 <div class="center">
-                    <input placeholder="De:" class="input-personalizar" />
-                    <input placeholder="Para:" class="input-personalizar" />
-                    <textarea placeholder="Mensaje (Opcional)" style="font-size: 17px;" cols="10" rows="3" class="mensaje-opcional input-personalizar"></textarea>
+                    <input id="Nombre" placeholder="De:" class="input-personalizar" />
+                    <input id="NombreHome" placeholder="Para:" style="margin-top: 25px;" class="input-personalizar" />
+                    <textarea id="textoHom" placeholder="Mensaje (Opcional)" style="resize:none; font-size: 17px;" cols="10" rows="3" class="mensaje-opcional input-personalizar"></textarea>
                 </div>
                 <div class="confirm">
                     <button onclick="volverVista17()" style="line-height: 50px;" class="textButton btn btn-white">CANCELAR</button>
@@ -120,17 +156,17 @@
             </div>
         </div>
     </div>
-    
+
     @*PAGE 24*@
-    <div id="page24" style="display:none !important; margin-top:60px;flex-direction: column;display: flex;">
-        <img src="/img/regalo3.png" style="width: 259px;height: 313px;" class="center-img" alt="" />
+    <div id="page24" class="" style="display:none !important;flex-direction: column;display: flex;">
+        <img src="/img/regalo3.png" style="width: 259px;height: 313px;margin-top: 20%;" class="center-img" alt="" />
         <div style="margin-top:40px;align-self: center;text-align-last: center;">
             <p class="one-line">Listo!</p>
             <p class="one-line">Tu mensaje</p>
             <p class="one-line">ya esta confirmado.</p>
         </div>
     </div>
-    
+
     @*PAGE 5*@
     <div id="page5" style="display:none !important;">
         <div class="column-flex" style="display:flex;flex-direction:row;margin-top:300px;justify-content: space-between;">
@@ -156,7 +192,7 @@ Hasta los 120 amigo!!
 
         </div>
     </div>
-    
+
     @*Page Asignacion*@
     <div id="pageAsignacion" style="display:none !important;">
         <center>
@@ -208,33 +244,30 @@ Hasta los 120 amigo!!
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script>
     $(document).on("change", ".file_multi_video", function (evt) {
-        //alert('cambio');
-        previewVideo();
-        //var $source = $('#video_here');
-        //$source[0].src = URL.createObjectURL(this.files[0]);
-        //$source.parent()[0].load();
-        //document.getElementById("video").style.display = '';
-        //document.getElementById("foto_here").style.display = "none";
-        //ocultarVista3();
+
+        // Vaciar imagen
+
+        document.getElementById("foto_here").style.display = 'none';
+        document.getElementById('foto').style.display = 'none';
+        // Fin
+        var $source = $('#video_here');
+        $source[0].src = URL.createObjectURL(this.files[0]);
+        $source.parent()[0].load();
+        document.getElementById("video_here").style.display = '';
+        document.getElementById("video").style.display = '';
+        //$("#video").attr("hidden", false);
+        ocultarVista3();
         //$("#video").attr("hidden", false);
     });
 
-    function previewVideo() {
-        // Where you will display your image
-        var preview = document.getElementById('video_here');
-        var file = document.getElementById('video').files[0];
-
-        preview.src = URL.createObjectURL(file);
-        preview.parent()[0].load();
-        // The button where the user chooses the local image to display
-        var file = document.getElementById('foto').files[0];
-
-        document.getElementById("video").style.display = '';
-        document.getElementById("foto_here").style.display = "none";
-        ocultarVista3();
-    }
-
     function previewFile() {
+
+        // Vaciar contendio video
+        document.getElementById("video_here").style.display = 'none';
+        document.getElementById("video").style.display = 'none';
+        var $source = $('#video_here');
+        $source[0].src = '';
+        //--------------------
         // Where you will display your image
         var preview = document.getElementById('foto_here');
         // The button where the user chooses the local image to display
@@ -256,16 +289,25 @@ Hasta los 120 amigo!!
             preview.src = "";
         }
         document.getElementById("foto_here").style.display = '';
-        document.getElementById("video").style.display = "none";
-        ocultarVista3();
+        document.getElementById('foto').style.display = '';
+        ocultarVista7();
+    }
+
+    function sacarFoto() {
+        document.getElementById("page3").style.display = "none";
+        document.getElementById("page7").style.display = '';
     }
 
     function volverVista3() {
         document.getElementById("page17").style.display = "none";
         document.getElementById("page3").style.display = '';
     }
-    function ocultarVista3(){
+    function ocultarVista3() {
         document.getElementById("page3").style.display = "none";
+        document.getElementById("page17").style.display = '';
+    }
+    function ocultarVista7() {
+        document.getElementById("page7").style.display = "none";
         document.getElementById("page17").style.display = '';
     }
     function ocultarVista17() {
@@ -295,6 +337,8 @@ Hasta los 120 amigo!!
             });
         });
     });
+    function guardarDatos() {
+    }
 
 
     function asigno(v) {

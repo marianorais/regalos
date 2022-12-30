@@ -1,4 +1,8 @@
-﻿
+﻿<style>
+    body{
+        overflow-x: hidden;
+    }
+</style>
 <div>
     @*PAGE 9*@
     <div style="margin-top:200px;">
@@ -15,31 +19,30 @@
 
     @*PAGE 4*@
     <div id="page4" style="display:none !important;">
-        <div class="column-flex" style="display:flex;flex-direction:row;margin-top:300px;justify-content: space-between;">
-
-            <div style="flex-direction:column">
-                <img src="/img/RegalosCustom.png" style="width: 331px;height: 360px;left: -790px;top: -150px;" class="img-fluid" alt="" />
-                <div style="margin-left: -270px;">
-                    <p style="font-size:39px" class="one-line-title titulo-sorpresa regalo-titulo">Hola Fede,</p>
-                    <p style="font-size:39px" class="one-line-title titulo-sorpresa regalo-titulo">Martín tiene una sorpresa</p>
-                    <p style="font-size:39px" class="one-line-title titulo-sorpresa regalo-titulo">para vos!</p>
+        <div class="column-flex" style="display:flex;flex-direction:row;margin-top:10%;justify-content: center;">
+            <input type="hidden" id="video" value="@ViewBag.video">
+            <div class="regaloCustom" style="flex-direction:column;display: flex;align-items: flex-start;">
+                <img src="/img/RegalosCustom.png" style="width: 331px;height: 360px;margin-left: -40px;" class="img-share img-fluid" alt="" />
+                <div class="p-content" style="margin-top: 50px;max-width: 90%;">
+                    <p style="font-size:39px" class="one-line-title ">Hola Fede,</p>
+                    <p style="font-size:39px" class="two-lines one-line-title">Lucas tiene una sorpresa</p>
+                    <p style="font-size:39px" class="one-line-title ">para vos!</p>
                 </div>
             </div>
 
-            <div style="flex-direction:column">
-                <img src="/img/amigos.png" style="top: -160px;left: -400px;width: 623px;height: 440px;" class="img-fluid" alt="" />
-                <textarea style="display: flex;flex: none;margin-top: 15px;" class="rectangulo img-fluid">Fede, 
-    felicitaciones por tus primeros 40 años.
-    Hasta los 120 amigo!!
+            <div style="flex-direction:column" class="share-data">
+                <div class="container-img" style="">
+                    <img id="fotoTomada" src="/img/amigos.png" style="object-fit: contain;width: 100%;height: 100%;" class="img-fluid amigos-foto" alt="">
+                </div>
+                <textarea style="display: flex;flex: none;margin-top: 15px;border:none;color: #404040c9;" class="font-openSans rectangulo img-fluid">Fede,
+felicitaciones por tus primeros 40 años.
+Hasta los 120 amigo!!
                 </textarea>
-                <div style="float: right;margin-top: 10px;" class="btn-center btn color-white">COMPARTIR</div>
+                <div style="padding-bottom: 0px;float: right;margin-top: 20px;align-self: self-end;" class="btn-center btn color-white">COMPARTIR</div>
             </div>
-
-
         </div>
     </div>
     @*PAGE 20*@
-
     <img class="logo" src="/img/dearx.png" style="width: 122px;height: 54px;position: absolute;bottom: 0;right: 0;" />
 
 </div>

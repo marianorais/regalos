@@ -21,6 +21,16 @@ namespace Regalo.Controllers
         {
             return View();
         }
+
+        public IActionResult Page7()
+        {
+            return View();
+        }
+
+        public IActionResult qr()
+        {
+            return View();
+        }
         public IActionResult PageAsignacion()
         {
             return View();

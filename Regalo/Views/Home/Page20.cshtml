@@ -8,20 +8,22 @@
         background-color: rgba(221, 204, 251, 0.25);
     }
 </style>
-<div style="top: 140px;" class="row">
+<div style="top: 540px;" class="row center-position">
     <div class="center">
         <h1 class="center personalizar-titulo">Personalizá tu mensaje</h1>
         <div class="center">
             <input placeholder="De:" class="input-personalizar" />
             <input placeholder="Para:" class="input-personalizar" />
-            <input placeholder="Mensaje (Opcional)" class="mensaje-opcional input-personalizar" />
+            <textarea placeholder="Mensaje (Opcional)" style="resize:none; font-size: 17px;" cols="10" rows="3" class="mensaje-opcional input-personalizar"></textarea>
         </div>
         <div class="confirm">
-            <button class="textButton btn btn-white">CANCELAR</button>
-            <button style="margin-left:20px;" class="textButton btn color-white">CONFIRMAR</button>
+            <button onclick="volverVista17()" style="line-height: 50px;" class="textButton btn btn-white">CANCELAR</button>
+            <button onclick="ocultarVista20()" style="margin-left:20px;text-align: center !important;line-height: 53px;" class="textButton btn color-white">
+                CONFIRMAR
+            </button>
         </div>
     </div>
 </div>
-<img class="logo" src="/img/dearx.png" style="width: 122px;height: 54px;margin-right: 60px; margin-top: 360px;float: right;" />
+<img class="logo" src="/img/dearx.png" style="width: 122px;height: 54px;position: absolute;bottom: 0;right: 0;" />
 
 
